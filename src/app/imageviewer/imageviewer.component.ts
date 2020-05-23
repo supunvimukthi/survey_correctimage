@@ -61,6 +61,9 @@ export class ImageviewerComponent implements OnInit {
   src1 = []
   src2 = []
   src3 = []
+  cl='nohover'
+  cl1='nohover'
+  cl2='nohover'
   time = 5
   counter$
   batch;
