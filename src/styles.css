@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-image: url(https://media.istockphoto.com/vectors/abstract-black-tech-geometric-background-vector-id820616890?k=6&m=820616890&s=170667a&w=0&h=d01eoVhhHzi7GIgfcqgmw47KYh8gLcBqF_Fi1gfGdmc=);
+    margin: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+html, body {  }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
