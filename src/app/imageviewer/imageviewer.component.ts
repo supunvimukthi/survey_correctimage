@@ -141,7 +141,21 @@ export class ImageviewerComponent implements OnInit {
           }
 
         })
-        console.log(this.src);
+        // console.log(this.src);
+        this.src.forEach(element => {
+          var img=new Image();
+         img.src=element;
+        });
+        this.src2.forEach(element => {
+          var img=new Image();
+         img.src=element;
+        });
+        this.src3.forEach(element => {
+          var img=new Image();
+         img.src=element;
+        });
+         
+
       }
       );
   }
