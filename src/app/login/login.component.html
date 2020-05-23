@@ -6,7 +6,7 @@ text-align: center; ">
       <mat-card-title >{{title}}</mat-card-title>
     </mat-card-header>
     <mat-card-content style="margin-top: 30px;font-size: large;text-align: left">
-      <span>{{text}}</span>
+      <span style="white-space:pre-wrap;">{{text}}</span>
     </mat-card-content>
     <mat-card-actions>
       <button  *ngIf="batch!='10'" style="text-align: center;margin: 0 auto" mat-raised-button (click)="login()" color="primary">{{button_title}}

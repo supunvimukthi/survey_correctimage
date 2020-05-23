@@ -1,4 +1,4 @@
-import { OnInit } from '@angular/core';
+import { OnInit, OnDestroy } from '@angular/core';
 import { Component, Directive, ElementRef, EventEmitter, HostListener, Inject, Input, NgModule, Optional, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { resolve } from 'url';
@@ -85,19 +85,13 @@ export class ImageviewerComponent implements OnInit {
     this.src=[]
     this.src1=[]
     this.src2=[]
-    console.log("start")
      
 
 
   }
 
+
   ngOnInit() {
-    if (localStorage.getItem("admin") != null) {
-    }
-    else {
-      alert("You have to login first")
-      this.router.navigate(["login"]);
-    }
     this.listObjects();
     this.counter$ = interval(1000).pipe(map((x) => {
       return x;
@@ -121,6 +115,8 @@ export class ImageviewerComponent implements OnInit {
 
 
   }
+
+
   
   onClick(selected){
     this.time=5
@@ -160,9 +156,7 @@ export class ImageviewerComponent implements OnInit {
       );
   }
 
-  ngOnDestroy() {
-    localStorage.removeItem("admin")
-  }
+
 
   /**
      * @param {?} event
@@ -180,7 +174,6 @@ export class ImageviewerComponent implements OnInit {
       this.triggerIndexBinding();
       this.reset();
       this.results[this.batch].push(selected)
-      console.log(this.results);
 
     }else{
       console.log(this.index+" "+this.src.length)
