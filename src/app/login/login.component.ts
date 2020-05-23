@@ -46,7 +46,6 @@ export class LoginComponent implements OnInit {
       this.text=this.text_mid
     }else if(this.batch=="10"){
       this.text=this.text_end
-      
     }
   }
 

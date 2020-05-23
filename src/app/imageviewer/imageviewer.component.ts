@@ -178,6 +178,7 @@ export class ImageviewerComponent implements OnInit {
     }else{
       console.log(this.index+" "+this.src.length)
       this.index=0
+      this.results[this.batch].push(selected)
       localStorage.setItem("results",JSON.stringify(this.results))
       this.router.navigate(["login"])
     }
