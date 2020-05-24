@@ -46,6 +46,7 @@ export class LoginComponent implements OnInit {
       this.text=this.text_mid
     }else if(this.batch=="10"){
       this.text=this.text_end
+      this.db.database.ref(localStorage.getItem("ref").replace("https://evident-healer-278012.firebaseio.com/","")).set(JSON.parse(localStorage.getItem("results")))
     }
   }
 
