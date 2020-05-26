@@ -21,13 +21,21 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { CustomMaterialModule } from './material.module';
 import { environment } from 'src/environments/environment';
+import { Imageviewer002Component } from './imageviewer002/imageviewer002.component';
+import { Login002Component } from './login002/login002.component';
+import { Login003Component } from './login003/login003.component';
+import { Imageviewer003Component } from './imageviewer003/imageviewer003.component';
 // import { annotorious } from 'angular-annotorious';
 
 @NgModule({
   declarations: [
     AppComponent,
     ImageviewerComponent,
-    LoginComponent
+    LoginComponent,
+    Imageviewer002Component,
+    Login002Component,
+    Login003Component,
+    Imageviewer003Component
   ],
   imports: [
     // annotorious,
