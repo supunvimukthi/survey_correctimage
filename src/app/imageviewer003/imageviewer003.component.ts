@@ -72,10 +72,10 @@ export class Imageviewer003Component implements OnInit {
   results:JSON=Object();
   constructor(private router: Router, private http: HttpClient) {
     if(this.router.getCurrentNavigation().extras.state==undefined){
-      this.batch=localStorage.getItem("batch")
+      this.batch=localStorage.getItem("batch003")
     }else{
       this.batch=this.router.getCurrentNavigation().extras.state.batch;
-      localStorage.setItem("batch",this.batch);
+      localStorage.setItem("batch003",this.batch);
     }
     if(localStorage.getItem("results")!=undefined){
       this.results=JSON.parse(localStorage.getItem("results"))

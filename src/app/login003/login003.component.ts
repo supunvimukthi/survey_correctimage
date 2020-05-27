@@ -30,7 +30,7 @@ export class Login003Component implements OnInit {
   ngOnInit() {
 
     this.userData = this.db.database.ref('UserData003');
-    this.batch=localStorage.getItem("batch")
+    this.batch=localStorage.getItem("batch003")
     this.button_title="Next Page"
     this.text="You will be shown two images after clicking 'next page' (arrow below). One is real and the other is computer-generated. You need to select the real one. It is better to go with the first one that you feel is most real - do not overthink.\
     \n \nThe first image you click will be selected, and you will be taken to the next page (even if time is left). If you feel you clicked the wrong one, or couldn't click one within the given time, that is completely okay. Do not overthink or worry about that. Just proceed with the next ones.\n \nThe images will stop showing in 5 seconds. There is a count-down timer on the top of each page above the images which shows time left. Even if you have not selected an image, you will proceed to the next page once time ends (5s). The timer of the next page will begin automatically. There are 4 batches, with 50 images in each batch. You get a break in between batches.\
@@ -54,7 +54,7 @@ export class Login003Component implements OnInit {
     if (true) {
       this.db.database.ref(localStorage.getItem("ref").replace("https://evident-healer-278012.firebaseio.com/","")).set(JSON.parse(localStorage.getItem("results")))
       localStorage.setItem("admin","true")
-      this.router.navigate(["image003"],{state:{"batch":Number(localStorage.getItem("batch"))?Number(localStorage.getItem("batch"))+1<10?"0"+String(Number(localStorage.getItem("batch"))+1):String(Number(localStorage.getItem("batch"))+1):"01"}});
+      this.router.navigate(["image003"],{state:{"batch":Number(localStorage.getItem("batch003"))?Number(localStorage.getItem("batch003"))+1<10?"0"+String(Number(localStorage.getItem("batch003"))+1):String(Number(localStorage.getItem("batch003"))+1):"01"}});
     } else {
       alert("Invalid credentials");
     }
