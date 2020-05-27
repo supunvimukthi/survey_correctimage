@@ -125,7 +125,7 @@ export class Imageviewer003Component implements OnInit {
 
   async listObjects() {
     let count=0;
-    this.http.get("https://storage.googleapis.com/storage/v1/b/research-kr-2020/o?prefix=Turing_batch1/batch_"+this.batch)
+    this.http.get("https://storage.googleapis.com/storage/v1/b/research-kr-2020/o?prefix=Turing_batch/batch_"+this.batch)
       .subscribe((data: any) => {
         data.items.map((record) => {
           if (record.name.includes("01", record.name.length - 6)) {

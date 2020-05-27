@@ -25,8 +25,6 @@ import { Imageviewer002Component } from './imageviewer002/imageviewer002.compone
 import { Login002Component } from './login002/login002.component';
 import { Login003Component } from './login003/login003.component';
 import { Imageviewer003Component } from './imageviewer003/imageviewer003.component';
-import { Imageviewer004Component } from './imageviewer004/imageviewer004.component';
-import { Login004Component } from './login004/login004.component';
 // import { annotorious } from 'angular-annotorious';
 
 @NgModule({
@@ -38,8 +36,6 @@ import { Login004Component } from './login004/login004.component';
     Login002Component,
     Login003Component,
     Imageviewer003Component,
-    Imageviewer004Component,
-    Login004Component
   ],
   imports: [
     // annotorious,
