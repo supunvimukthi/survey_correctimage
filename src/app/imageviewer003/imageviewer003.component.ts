@@ -97,11 +97,11 @@ export class Imageviewer003Component implements OnInit {
       return x;
     }));
     this.subscription = this.counter$.subscribe((x) => {
-      if (this.time == 0) {
-        this.nextImage(-1)
-        this.time = 5
-      }
-      else if (this.time == 5) {
+      // if (this.time == -2) {
+      //   this.nextImage(-1)
+      //   this.time = 5
+      // }
+      if (this.time == 5) {
           if(this.loading == false && this.loading1 == false){
             this.time-=1
           }
@@ -235,9 +235,11 @@ export class Imageviewer003Component implements OnInit {
    */
   onLoad() {
     this.loading = false;
+    this.cl = 'nohover'
   }
   onLoad1() {
     this.loading1 = false;
+    this.cl1 = 'nohover'
   }
   onLoad2() {
     this.loading2 = false;

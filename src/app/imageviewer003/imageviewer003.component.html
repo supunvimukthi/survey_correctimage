@@ -1,19 +1,23 @@
 <div class="top-bar">
 
   <div style="margin: auto; text-align: center; font-size: xxx-large;" class="title">
-      <b>00:0{{time}}</b>
+<!--      <b>00:0{{time}}</b>-->
+    <b> Click the correct image </b>
   </div>
 
 </div>
+
 <div  class="img-container" [style.backgroundColor]="config.containerBackgroundColor"
 (wheel)="scrollZoom($event)" >
 
 <div  class="imageWrapper image-overlay">
-  <img [hidden]="!loading" [src]="src[index]" [ngClass]="cl" (mouseover)="cl='hover'" (mouseout)="cl='nohover'" (click)="onClick(1)" class="overlayImage1 img-sd"  [ngStyle]="style" alt="Image not found..."  (load)="onLoad()" (loadstart)="onLoadStart()"/>
+  <img *ngIf="time>3" [hidden]="!loading" [src]="src[index]" (click)="onClick(1)" class="overlayImage1 img-sd"  [ngStyle]="style" alt="Image not found..."  (load)="onLoad()" (loadstart)="onLoadStart()"/>
+  <img *ngIf="time<4" [hidden]="!loading" src="https://cdn3.iconfinder.com/data/icons/touch-gesture-outline/512/double_click_touch_click_finger_hand_select_gesture-512.png" [ngClass]="cl" (mouseover)="cl='hover'" (mouseout)="cl='nohover'" (click)="onClick(1)" class="overlayImage1 img-sd"  [ngStyle]="style" alt="Click to Select"  (load)="onLoad()" (loadstart)="onLoadStart()"/>
   <img *ngIf="loading" class="overlayImage img-sd "  [ngStyle]="style" alt="Image not found..."   (loadstart)="onLoadStart()" src="https://media.tenor.com/images/e549f9798674301c5af2c91581194091/tenor.gif">
 </div>
 <div  class="imageWrapper image-overlay">
-  <img [hidden]="!loading1" class="overlayImage1 img-sd" [ngClass]="cl1" (mouseover)="cl1='hover'" (mouseout)="cl1='nohover'" (click)="onClick(2)" [src]="src2[index]" [ngStyle]="style" alt="Image not found..."  (load)="onLoad1()" (loadstart)="onLoadStart()"/>
+  <img *ngIf="time>3" [hidden]="!loading1" class="overlayImage1 img-sd" (click)="onClick(2)" [src]="src2[index]" [ngStyle]="style" alt="Image not found..."  (load)="onLoad1()" (loadstart)="onLoadStart()"/>
+  <img *ngIf="time<4" [hidden]="!loading1" src="https://cdn3.iconfinder.com/data/icons/touch-gesture-outline/512/double_click_touch_click_finger_hand_select_gesture-512.png" [ngClass]="cl1" (mouseover)="cl1='hover'" (mouseout)="cl1='nohover'" (click)="onClick(2)" class="overlayImage1 img-sd"  [ngStyle]="style" alt="Click to Select"  (load)="onLoad()" (loadstart)="onLoadStart()"/>
   <img *ngIf="loading1" class="overlayImage img-sd "  [ngStyle]="style" alt="Image not found..."   (loadstart)="onLoadStart()" src="https://media.tenor.com/images/e549f9798674301c5af2c91581194091/tenor.gif">
 
 </div>
