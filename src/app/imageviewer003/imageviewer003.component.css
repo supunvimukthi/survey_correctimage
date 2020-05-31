@@ -81,14 +81,14 @@
 
   .img-sd {
     z-index: 2;
-    padding: 20px;
+    padding: 85px;
     /* padding-right: 0px; */
     text-align: center;
     margin: 0 auto;
     display: -webkit-box;
     display: flex;
-    height: 230px;
-    width: 230px; }
+    height: 100px;
+    width: 100px; }
 
 .image-overlay{
   z-index: 2;
