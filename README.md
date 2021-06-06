@@ -1,6 +1,6 @@
 # AnnotationTool
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.6.
+This is an web based annotatation tool implemented for a survey and data collection purpose for a machine learning project.
 
 ## Development server
 
