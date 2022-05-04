@@ -21,7 +21,7 @@
     "@angular/platform-browser": "~8.2.8",
     "@angular/platform-browser-dynamic": "~8.2.8",
     "@angular/router": "~8.2.8",
-    "angular": "^1.7.9",
+    "angular": "^1.8.3",
     "angular-annotorious": "^1.0.7",
     "angular-image-annotator": "0.0.10",
     "angularfire2": "^5.4.2",
